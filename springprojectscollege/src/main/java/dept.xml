@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    
+    <bean id="stud1" class="com.tnsif.springprojectscollege.Student">
+        <property name="id" value="101"/>
+        <property name="name" value="Anu"/>
+        <property name="gender" value="Female"/>
+        <property name="totalMarks" value="98"/>
+        <property name="check" value="true"/>
+    </bean>
+
+    <bean id="stud2" class="com.tnsif.springprojectscollege.Student">
+        <property name="id" value="102"/>
+        <property name="name" value="Ravi"/>
+        <property name="gender" value="male"/>
+        <property name="totalMarks" value="92"/>
+        <property name="check" value="true"/>
+    </bean>
+
+    <bean id="stud3" class="com.tnsif.springprojectscollege.Student">
+        <property name="id" value="201"/>
+        <property name="name" value="Raj"/>
+        <property name="gender" value="Male"/>
+        <property name="totalMarks" value="97.5"/>
+        <property name="check" value="true"/>
+    </bean>
+    
+    <bean id="stud4" class="com.tnsif.springprojectscollege.Student">
+        <property name="id" value="202"/>
+        <property name="name" value="Priya"/>
+        <property name="gender" value="Female"/>
+        <property name="totalMarks" value="92.3"/>
+        <property name="check" value="true"/>
+    </bean>
+    
+    <bean id="stud5" class="com.tnsif.springprojectscollege.Student">
+        <property name="id" value="301"/>
+        <property name="name" value="Pooja"/>
+        <property name="gender" value="Female"/>
+        <property name="totalMarks" value="97"/>
+        <property name="check" value="true"/>
+    </bean>
+    
+    <bean id="stud6" class="com.tnsif.springprojectscollege.Student">
+        <property name="id" value="302"/>
+        <property name="name" value="Ram"/>
+        <property name="gender" value="male"/>
+        <property name="totalMarks" value="88.7"/>
+        <property name="check" value="true"/>
+    </bean>
+    
+    <bean id="stud7" class="com.tnsif.springprojectscollege.Student">
+        <property name="id" value="401"/>
+        <property name="name" value="reshu"/>
+        <property name="gender" value="Female"/>
+        <property name="totalMarks" value="77"/>
+        <property name="check" value="true"/>
+    </bean>
+    
+    <bean id="stud8" class="com.tnsif.springprojectscollege.Student">
+        <property name="id" value="402"/>
+        <property name="name" value="Somu"/>
+        <property name="gender" value="male"/>
+        <property name="totalMarks" value="98"/>
+        <property name="check" value="true"/>
+    </bean>
+
+    
+    <bean id="dept1" class="com.tnsif.springprojectscollege.Department">
+        <property name="departmentName" value="AIDS Department"/>
+        <property name="studentList">
+            <list>
+                <ref bean="stud1"/>
+                <ref bean="stud8"/>
+                
+            </list>
+        </property>
+    </bean>
+
+    <bean id="dept2" class="com.tnsif.springprojectscollege.Department">
+        <property name="departmentName" value="AIMl Department"/>
+        <property name="studentList">
+            <list>
+                <ref bean="stud2"/>
+                <ref bean="stud7"/>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="dept3" class="com.tnsif.springprojectscollege.Department">
+        <property name="departmentName" value="CSE Department"/>
+        <property name="studentList">
+            <list>
+                <ref bean="stud3"/>
+                <ref bean="stud6"/>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="dept4" class="com.tnsif.springprojectscollege.Department">
+        <property name="departmentName" value="IT Department"/>
+        <property name="studentList">
+            <list>
+                <ref bean="stud4"/>
+                <ref bean="stud5"/>
+            </list>
+        </property>
+    </bean>
+
+    
+    <bean id="college" class="com.tnsif.springprojectscollege.College">
+        <property name="collegeName" value="IFET COLLEGE OF ENGINEERING"/>
+        <property name="departmentList">
+            <list>
+                <ref bean="dept1"/>
+                <ref bean="dept2"/>
+                 <ref bean="dept3"/>
+                <ref bean="dept4"/>
+            </list>
+        </property>
+    </bean>
+</beans>
